@@ -95,3 +95,45 @@ console.log(result);
 // &&	            logical and
 // ||	            logical or
 // !	            logical not
+
+// JavaScript if else
+// The if statement executes a block if a condition is true. When the condition is false, it does nothing.
+
+// But if you want to execute a statement if the condition is false, you can use an if...else statement.
+
+// The following example uses the if...else statement to check if the age is greater than or equal to 18:
+
+// let age = 18;
+
+// if (age >= 18) {
+//   console.log('You can sign up.');
+// } else {
+//   console.log('You must be at least 18 to sign up.');
+// }
+// Code language: JavaScript (javascript)
+// In this example, the age is 18. Therefore, the expression age >= 18 is true. Hence, you’ll see the following message in the console:
+
+// You can sign up.
+// Code language: JavaScript (javascript)
+// The following example is the same as above except that the age is 18 instead of 16:
+
+// let age = 16;
+
+// if (age >= 18) {
+//   console.log('You can sign up.');
+// } else {
+//   console.log('You must be at least 18 to sign up.');
+// }
+// Code language: JavaScript (javascript)
+// Output:
+
+// You must be at least 18 to sign up.
+
+let age = 16;
+let country = 'USA';
+
+if (age >= 16 && country === 'USA') {
+  console.log('You can get a driving license.');
+} else {
+  console.log('You are not eligible to get a driving license.');
+}
