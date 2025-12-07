@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(2, 2, 53);
+}
+
+.container{
+    background-color: white;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+h2{
+    color: red;
+    padding-bottom: 10px;    
+}
+
+#tempinput{
+    padding: 0.5rem;
+}
+
+#unit{
+    padding: 0.5rem;
+}
+
+button{
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+}

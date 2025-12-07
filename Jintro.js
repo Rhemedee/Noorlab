@@ -242,3 +242,27 @@ showMe(); // a hoisting example
 // Use the return statement to return a value from a function explicitly.
 // The arguments variable is an array-like object inside a function, representing function arguments.
 // The function hoisting allows you to call a function before declaring it.
+
+// ARRAY
+// This ia a data structure that is use to represent a list of items
+
+let selctedColors = ["red", "blue", "green"];
+console.log(selctedColors);
+console.log(selctedColors.length);
+console.log(selctedColors[0]);
+
+selctedColors[3] = "yellow";
+console.log(selctedColors);
+
+selctedColors.push(17);
+console.log(selctedColors);
+
+selctedColors.unshift("black");
+console.log(selctedColors);
+
+selctedColors.pop();
+console.log(selctedColors);
+
+selctedColors.shift();
+console.log(selctedColors);
+
