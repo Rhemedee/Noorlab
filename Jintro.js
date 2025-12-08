@@ -266,3 +266,29 @@ console.log(selctedColors);
 selctedColors.shift();
 console.log(selctedColors);
 
+// FOR STATEMENT
+// A for loop repeats until a specified condition evaluates to false.
+
+// for (initialization; condition; afterthought)
+//  statement
+
+// eg
+for (let y=3; y<=5; y++){
+  console.log(y)
+}
+
+// do...while statement
+// The do...while statement repeats until a specified condition evaluates to false.
+
+// A do...while statement looks as follows:
+
+// do
+//   statement
+// while (condition);
+
+let z = 1;
+do {
+  z += 1;
+  console.log(z);
+} while (z < 5);
+
