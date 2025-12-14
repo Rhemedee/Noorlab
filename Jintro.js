@@ -292,3 +292,55 @@ do {
   console.log(z);
 } while (z < 5);
 
+
+// ARRAY
+
+// Filtered Array, Mapping, Find,  foreach
+const items = [
+  {name: "Top", price: 500},
+  {name: "Trouser", price: 400},
+  {name: "cap", price: 350},
+  {name: "Agbada", price: 900},
+  {name: "Danshiki", price: 600}
+]
+
+const filtereditems = items.filter((item) => {return item.price <=500})
+
+const itemsName = items.map((items => {
+  return items.name
+}))
+
+const finditem = items.find((items => {
+  return items.name === "cap"
+}))
+
+items.forEach((items => {
+  console.log(items.price)
+}))
+
+const hascostitems = items.some((items => {
+  return items.price >= 600
+}))
+
+const checkprice = items.every((items) => {
+  return items.price >= 100
+})
+
+const totalPrice = items.reduce((currentTotal, items) => {
+  return items.price + currentTotal
+}, 0)
+
+
+console.log(filtereditems)
+console.log(itemsName)
+console.log(finditem)
+console.log(items)
+console.log(hascostitems)
+console.log(checkprice)
+console.log(totalPrice)
+
+// Include
+const num = [2,3,4,5,6]
+const incude = num.includes(4)
+
+console.log(incude)
