@@ -344,3 +344,75 @@ const num = [2,3,4,5,6]
 const incude = num.includes(4)
 
 console.log(incude)
+
+// Introduction to the JavaScript objects
+
+// let person = {
+//   firstName: 'John',
+//   lastName: 'Doe'
+// };
+
+// Accessing properties
+// To access a property of an object, you use one of two notations: the dot notation and array-like notation.
+
+// 1) The dot notation (.)
+// The following illustrates how to use the dot notation to access a property of an object:
+
+// objectName.propertyName
+
+let person = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person['firstName']);
+console.log(person['lastName']);
+
+// When a property name contains spaces, you need to place it inside quotes. For example, the following address object has the 'building no' as a property:
+
+let address = {
+  'building no': 3960,
+  street: 'North 1st street',
+  state: 'CA',
+  country: 'USA'
+};
+console.log(address['building no'])
+
+// Modifying the value of a property
+// To change the value of a property, you use the assignment operator (=). For example:
+
+let me = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+
+person.firstName = 'Jane';
+person.age = 22
+person.class= "grade 2"
+
+console.log(person);
+
+// delete
+
+delete person.class
+console.log(me)
+
+// Checking if a property exists
+// To check if a property exists in an object, you use the in operator:
+
+// propertyName in objectName
+// The in operator returns true if the propertyName exists in the objectName.
+
+// The following example creates an employee object and uses the in operator to check if the ssn and employeeId properties exist in the object:
+
+let employee = {
+    firstName: 'Peter',
+    lastName: 'Doe',
+    employeeId: 1
+};
+
+console.log('ssn' in employee);
+console.log('employeeId' in employee);
+
