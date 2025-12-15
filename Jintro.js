@@ -416,3 +416,17 @@ let employee = {
 console.log('ssn' in employee);
 console.log('employeeId' in employee);
 
+
+// DOM
+
+// EXAMIN THE DOCUEMENT OBJECT 
+
+console.dir(document)
+console.dir(document.image)
+console.dir(document.URL)
+console.dir(document.domain)
+
+// GETELEMENTBYID
+let headertitle = document.getElementById("main-header")
+headertitle.textContent = "Hello"
+headertitle.innerHTML = "Goodbye"
