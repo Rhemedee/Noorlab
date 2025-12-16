@@ -427,6 +427,73 @@ console.dir(document.URL)
 console.dir(document.domain)
 
 // GETELEMENTBYID
-let headertitle = document.getElementById("main-header")
-headertitle.textContent = "Hello"
-headertitle.innerHTML = "Goodbye"
+// let headertitle = document.getElementById("header-title")
+// let header = document.getElementById("main-header")
+// // headertitle.textContent = "Hello"
+// // headertitle.innerHTML = "Goodbye"
+
+// headertitle.innerHTML = '<h3> TOBY </h3>';
+// headertitle.style.border = '2px solid #000'
+// header.style.backgroundColor = 'Yellow'
+
+// GETELEMENTSBYCLASSNAME
+// let item = document.getElementsByClassName('list-group-item')
+// console.log(item);
+// console.log(item[3]);
+// item[3].textContent = 'Changed';
+// item[3].style.backgroundColor = 'Blue'
+
+// // item.style.backgtoundColor = '#f4f4f4';
+// // this will give erroe
+
+// for(i = 0; i < item.length; i++){
+//   item[i].style.backgroundColor = '#f4f4f4'
+// }
+
+// GETELEMENTBYTAGNAME
+// let li = document.getElementsByTagName('li')
+// console.log(li);
+// console.log(li[2]);
+// li[2].textContent = 'Changed';
+
+
+// // item.style.backgtoundColor = '#f4f4f4';
+// // this will give erroe
+
+// for(let i = 0; i < li.length; i++){
+//   li[i].style.backgroundColor = '#f4f4f4'
+// }
+
+
+// QUERY SELECTOR
+// let header = document.querySelector('#main-header');
+// header.style.borderButtom = 'solid 6px #ff0000';
+
+// let input = document.querySelector('input');
+// input.value = "Thanks";
+
+// let submit = document.querySelector('input[type = submit]');
+// submit.value = 'Send'
+
+// let item = document.querySelector('.list-group-item');
+// item.style.color = 'red'
+
+// let lastItem = document.querySelector('.list-group-item:last-child');
+// lastItem.style.color = 'blue';
+
+// let secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.color = 'grey'
+
+// QUERYSELECTORALL
+titles = document.querySelectorAll('.title')
+console.log(titles)
+
+titles[0].textContent = 'HI'
+
+odd = document.querySelectorAll('li:nth-child(odd)');
+even = document.querySelectorAll('li:nth-child(even)');
+
+for(let i = 0; i < odd.length; i++ ){
+  odd[i].style.backgroundColor = 'grey';
+  even[i].style.backgroundColor = 'blue'
+}
