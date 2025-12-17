@@ -485,15 +485,96 @@ console.dir(document.domain)
 // secondItem.style.color = 'grey'
 
 // QUERYSELECTORALL
-titles = document.querySelectorAll('.title')
-console.log(titles)
+// titles = document.querySelectorAll('.title')
+// console.log(titles)
 
-titles[0].textContent = 'HI'
+// titles[0].textContent = 'HI'
 
-odd = document.querySelectorAll('li:nth-child(odd)');
-even = document.querySelectorAll('li:nth-child(even)');
+// odd = document.querySelectorAll('li:nth-child(odd)');
+// even = document.querySelectorAll('li:nth-child(even)');
 
-for(let i = 0; i < odd.length; i++ ){
-  odd[i].style.backgroundColor = 'grey';
-  even[i].style.backgroundColor = 'blue'
+// for(let i = 0; i < odd.length; i++ ){
+//   odd[i].style.backgroundColor = 'grey';
+//   even[i].style.backgroundColor = 'blue'
+// }
+
+// How to Listen to DOM Events
+// To listen for an event, you need to attach an event listener to an element by using the addEventListener() method.
+
+// The addEventListener() method accepts two parameters:
+
+// The event type to listen to
+// A function to run when the event is triggered
+
+// Element.addEventListener(type, function);
+
+// CHANGE THE TEXT THE H2 ADD ITEM TEXT
+
+// const button = document.getElementById("subButton");
+
+
+// function newText(event){
+//   const text = document.getElementById("add")
+//   text.innerText = "Include Item"
+// }
+
+// button.addEventListener("click", newText)
+
+// Keyboard Events
+// For the keyboard, you can track the keydown and keyup events, which run when you press and release a key, respectively.
+
+// To show you an example, run the following code from the console:
+
+document.addEventListener("keydown", event => {
+  console.log(`A key was pressed: ${event.key}`)
+});
+
+document.addEventListener("keyup", event => {
+  console.log(`A key was released: ${event.key}`)
+});
+
+
+// Mouse Events
+// Aside from keyboard events, the DOM also provides a way to track any mouse events.
+
+// The most common mouse events that you can track are:
+
+// mousedown – the mouse button was pressed
+// mouseup – the mouse button was released
+// click – a click event
+// dblclick – a double click event
+// mousemove – when the mouse is moved over the element
+// contextmenu – when the context menu is opened, for example on a right mouse button click
+
+// Again, you can test these events by adding an event listener directly to the document object:
+
+document.addEventListener("mousedown", event =>{
+  console.log(`The mouse was pressed`)
+});
+
+document.addEventListener("mouseup", event =>{
+  console.log(`The mouse was released`)
+});
+
+
+// How to Listen to Events using HTML Attributes
+// Aside from using the addEventListener() method, you can also listen to events by adding the on[eventname] attribute to your HTML elements.
+
+// For example, suppose you want to listen to a button click. You can add the onclick attribute to your button as follows:
+
+// function handleClick(event){
+//   alert(`The button has been clicked`)
+// }
+
+// In the button element above, we add the onclick property and pass the handleClick() function to it.
+
+// When we click on the button, the handleClick() function will be executed.
+
+// You can also add the onclick attribute using JavaScript as follows:
+
+const myBtn = document.getElementById("button")
+myBtn.onclick = handleClick;
+
+function handleClick(event){
+  alert(`The button has ben clicked`)
 }
