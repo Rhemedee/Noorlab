@@ -525,13 +525,13 @@ console.dir(document.domain)
 
 // To show you an example, run the following code from the console:
 
-document.addEventListener("keydown", event => {
-  console.log(`A key was pressed: ${event.key}`)
-});
+// document.addEventListener("keydown", event => {
+//   console.log(`A key was pressed: ${event.key}`)
+// });
 
-document.addEventListener("keyup", event => {
-  console.log(`A key was released: ${event.key}`)
-});
+// document.addEventListener("keyup", event => {
+//   console.log(`A key was released: ${event.key}`)
+// });
 
 
 // Mouse Events
@@ -548,13 +548,13 @@ document.addEventListener("keyup", event => {
 
 // Again, you can test these events by adding an event listener directly to the document object:
 
-document.addEventListener("mousedown", event =>{
-  console.log(`The mouse was pressed`)
-});
+// document.addEventListener("mousedown", event =>{
+//   console.log(`The mouse was pressed`)
+// });
 
-document.addEventListener("mouseup", event =>{
-  console.log(`The mouse was released`)
-});
+// document.addEventListener("mouseup", event =>{
+//   console.log(`The mouse was released`)
+// });
 
 
 // How to Listen to Events using HTML Attributes
@@ -572,9 +572,119 @@ document.addEventListener("mouseup", event =>{
 
 // You can also add the onclick attribute using JavaScript as follows:
 
-const myBtn = document.getElementById("button")
-myBtn.onclick = handleClick;
+// const myBtn = document.getElementById("button")
+// myBtn.onclick = handleClick;
 
-function handleClick(event){
-  alert(`The button has ben clicked`)
-}
+// function handleClick(event){
+//   alert(`The button has ben clicked`)
+// }
+
+// Referencing forms
+// To reference the <form> element, you can use DOM selecting methods such as getElementById():
+
+// const form = document.getElementById('subscribe');
+
+// Code language: JavaScript (javascript)
+// An HTML document can have multiple forms. The document.forms property returns a collection of forms (HTMLFormControlsCollection) on the document:
+
+// document.forms
+
+// Code language: JavaScript (javascript)
+// To reference a form, you use an index. For example, the following statement returns the first form of the HTML document:
+
+// document.forms[0]
+
+
+// Submitting a form
+// This section is where the real "magic" happens in web development! This is how you control what happens when a user clicks that "Submit" button.
+
+// Here is the breakdown of the most important concepts from your text:
+
+// 1. The Submit Event vs. The Submit Method
+// There is a big difference between the event and the method:
+
+// The Event (submit): This is like a "warning bell." It rings the moment the user clicks the button. This is your chance to check if they filled out the form correctly.
+
+// The Method (form.submit()): This is a command you give in your code to force the form to send data.
+
+// Important Note: As your text mentioned, if you use the method form.submit(), the "warning bell" (event) won't ring. You have to do your checks manually before calling it.
+
+// 2. The Power of event.preventDefault()
+// By default, when you click a submit button, the browser immediately tries to refresh the page or go to a new URL to send the data.
+
+// If you use event.preventDefault(), you are telling the browser: "Wait! Don't send that yet. I want to check the data first."
+
+// 3. Practical Example
+// Here is how that looks in a real-world scenario:
+
+// JavaScript
+
+// const form = document.getElementById('signup');
+
+// form.addEventListener('submit', (event) => {
+//     const password = document.getElementById('password').value;
+
+//     if (password.length < 8) {
+//         // Stop the form from sending if the password is too short
+//         event.preventDefault();
+//         alert('Password must be at least 8 characters!');
+//     }
+// });
+
+
+// Accessing form fields
+// This section explains how to actually "grab" the data your users type into the boxes. It's the bridge between the user's keyboard and your JavaScript code.
+
+// Here is the breakdown of what this text is teaching you:
+
+// 1. The "Elements" Shortcut
+// Instead of asking the computer to search the whole document (which we agreed is slower), you use form.elements.
+
+// Imagine form.elements as a toolbox that automatically contains everything inside that specific form:
+
+// form.elements[0] is the first tool in the box.
+
+// form.elements['name'] is the tool labeled "name".
+
+// 2. Name vs. ID
+// In your HTML example, the input has both id="name" and name="name".
+
+// The ID is usually for CSS (styling) or specific DOM selection.
+
+// The Name is what the server usually looks for.
+
+// In JavaScript, form.elements['name'] is smart enough to look for either the name or the ID to find the right box.
+
+// 3. The .value Property
+// This is the most important part of the code you pasted.
+
+// form.elements['name'] gets you the entire HTML element (the whole input box).
+
+// form.elements['name'].value gets you the actual text the user typed inside it (like "Todd").
+
+const form = document.getElementById("signUp")
+
+form.addEventListener(("submit"), (event) => {
+  const firstName = document.getElementById("firstName").value
+
+  if (firstName === ""){
+    alert("Please enter your First Name")
+  }
+})
+
+form.addEventListener(("submit"), (event) => {
+  const lastName = document.getElementById("lastName").value
+
+  if (lastName === ""){
+    alert("Please enter your Last Name")
+  }
+})
+
+
+form.addEventListener("submit", (event) => {
+  const password = document.getElementById("password").value;
+
+  if (password.length < 9 ){
+    alert("Password Is not strong enough, must be atleast 8 Characters");
+  }
+})
