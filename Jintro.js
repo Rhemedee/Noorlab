@@ -688,3 +688,143 @@ form.addEventListener("submit", (event) => {
     alert("Password Is not strong enough, must be atleast 8 Characters");
   }
 })
+
+
+// Introduction to the Storage type
+// The Storage type is used to store data as name–value pairs.
+
+// It works like an object but includes special methods:
+
+// setItem(name, value): saves a value
+
+// getItem(name): retrieves a value
+
+// removeItem(name): deletes a specific item
+
+// key(index): gets the key at a given position
+
+// clear(): removes all stored data
+
+// The length property shows how many items are stored.
+
+// Storage can only store strings.
+
+// Any non-string value is automatically converted to a string when saved.
+
+// Retrieved values are always returned as strings.
+
+
+// The JavaScript localStorage object
+// localStorage is an HTML5 feature that lets web browsers store data permanently, with no expiration date.
+
+// Data in localStorage remains available even after the browser is closed.
+
+// Stored data is tied to a specific origin (protocol, host, and port), meaning different sites cannot access each other’s data.
+
+// Unlike cookies, localStorage data is not sent to the server with every request.
+
+// Because of this, localStorage can store much more data (typically up to 5MB) compared to cookies (about 4KB).
+
+// localStorage data is only accessible and managed by client-side JavaScript.
+
+// Cookies, in contrast, can be accessed and managed by both the browser and the server.
+
+
+// Accessing the localStorage
+// localStorage is accessed through the window object using window.localStorage, though window can be omitted since it’s global.
+
+// localStorage is an instance of the Storage type, so it supports all Storage methods.
+
+// When accessed in the browser console, it appears as a Storage object with a length property showing how many items are stored.
+
+// setItem(key, value) is used to save data in localStorage.
+
+// The length property returns the total number of stored key–value pairs.
+
+// getItem(key) retrieves the value associated with a specific key.
+
+// removeItem(key) deletes a specific entry from localStorage.
+
+// Multiple items can be stored and later looped through by getting all keys (e.g., with Object.keys()) and retrieving each value.
+
+
+window.localStorage.setItem("theme", "dark")
+console.log(localStorage.theme.length)
+
+// 1) The setItem() method
+
+window.localStorage.setItem('theme','dark');
+
+// 2) The length property
+
+console.log(window.localStorage.length); 
+
+console.log(localStorage.length); 
+
+// 3) The getItem() method
+
+localStorage.getItem('theme'); // 'dark'
+
+// 4) The removeItem() method
+
+localStorage.removeItem('theme');
+
+// 5) Loop over keys of the localStorage object
+// The following stores three name-value pairs to the localStorage:
+
+localStorage.setItem('theme','light');
+localStorage.setItem('backgroundColor','white');
+localStorage.setItem('color','#111');
+
+
+// To iterate over name-value pairs stored in the localStorage, you use the Object.keys() method with for...of loop:
+
+// let keys = Object.keys(localStorage);
+// for(let key of keys) {
+//   console.log(`${key}: ${localStorage.getItem(key)}`);
+// }
+
+// Output:
+
+// color: #111
+// theme: light
+// backgroundColor: white
+
+
+// Storing objects
+// The Storage type stores only string data. To store objects, you need to convert them into strings using the JSON.stringify() method. For example:
+
+const spec ={
+  name: "Tecno",
+  color:"Green",
+  price:"#5000",
+}
+
+localStorage.setItem("spec", JSON.stringify(spec))
+console.log(localStorage.getItem("spec"))
+
+// The following retrieves the value from the localStorage and converts it back to the object using the JSON.parse() method.
+
+// let storedSettings = JSON.parse(localStorage.getItem('spec'));
+// console.log(storedSettings);
+
+
+// The storage event
+// When you make a change to the Storage object, the storage event is fired on the document.
+
+// The storage event occurs in the following scenarios:
+
+// Store a name-value pair by calling the setItem() method.
+// Remove a name-value pair by calling the removeItem() method.
+// And remove all values by calling the clear() method.
+// The storage event has the following properties:
+
+// domain – the domain which the storage changes for.
+// key – the key that was set or removed.
+// newValue – the value that the key was set to or null if the key was removed.
+// oldValue – the value before the key was set or removed.
+// To listen for the storage event, you use the addEventListener() method of the window object like this:
+
+// addEventListener('storage', function(e){
+//    console.log(`The value of the ${e.key} changed for the ${e.domain}.`);
+// });
