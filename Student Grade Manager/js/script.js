@@ -59,7 +59,7 @@ const grade = [
         subject: "English",
         score: 67,
         Grade: "B"
-    }
+    },
 
     {
         name: "Odelade Aliameen",
