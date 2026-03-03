@@ -30,5 +30,3 @@ blue.addEventListener("click", function(){
     text.style.color = "blue";
     colorCode.textContent = `The Color Code is ${color.blue}`
 })
-
-
