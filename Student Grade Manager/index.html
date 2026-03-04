@@ -24,16 +24,18 @@
                 <h2>Add Student</h2>
 
                 <form action="">
-                    <input type="text" placeholder="Name" id="name">
-                    <input type="text" placeholder="Subject" id="subject">
-                    <input type="text" placeholder="Score" id="Score">
+                    <input type="text" placeholder="Name" id="nameInp" required>
+                    <input type="text" placeholder="Subject" id="subjectInp" required>
+                    <input type="text" placeholder="Score" id="scoreInp" required>
+                    <input type="text" placeholder="Grade" id="grade" required>
 
-                    <button>Add Student</button>
+                    <button id="addbtn">Add Student</button>
                 </form>
             </div>
 
             <div class="box">
                 <h2>Search</h2>
+                <input type="text" placeholder="Search by name or subject" id="searchInp">
             </div>
         </div>
 
@@ -63,7 +65,7 @@
                 </div>
 
                 <div class="grade-down">
-                    <table>
+                    <table id="studentTable">
                         <tr>
                             <th>Student Name</td>
                             <th>Subject</td>
@@ -71,7 +73,7 @@
                             <th>Grade</td>
                         </tr>
 
-                        <tr>
+                        <!-- <tr>
                             <td>Akinfumi Taiwo</td>
                             <td>Mathematics</td>
                             <td>82</td>
@@ -125,11 +127,12 @@
                             <td>Mathematics</td>
                             <td>76</td>
                             <td>A</td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>
         </div>
     </div>
+<script src="js/script.js"></script>
 </body>
 </html>

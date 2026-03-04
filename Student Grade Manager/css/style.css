@@ -125,18 +125,57 @@ header .left h1{
 }
 
 .grade-down{
-    /* margin-top: 15px; */
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid rgb(58, 56, 56);
+    border-radius: 10px;
 }
 .grade-down table{
     width: 100%;
     text-align: left;
     color: rgb(211, 210, 210);
-    padding: 15px;
-    border: 1px solid rgb(58, 56, 56);
-    border-radius: 10px;
+    border-collapse: collapse;
     
 }
 
-td, th{
-    padding-bottom: 20px;
+.grade-down th {
+    position: sticky;
+    top: 0;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    padding: 15px;
+    border-bottom: 2px solid rgb(58, 56, 56);
+    z-index: 10;
+}
+
+.grade-down td{
+    padding: 15px;
+    border-bottom: 1px solid rgb(35, 35, 35);
+}
+
+.grade-down button {
+background-color: rgb(220, 53, 69);
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.score-box h3 {
+font-size: 24px;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.average h3 {
+color: rgb(46, 204, 113); /* Fresh Green */
+}
+
+.highest-score h3 {
+color: rgb(241, 196, 15); /* Golden Yellow */
+}
+
+.lowest-score h3 {
+color: rgb(231, 76, 60); /* Soft Red */
 }
