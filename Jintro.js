@@ -828,3 +828,27 @@ console.log(localStorage.getItem("spec"))
 // addEventListener('storage', function(e){
 //    console.log(`The value of the ${e.key} changed for the ${e.domain}.`);
 // });
+ 
+// Asynchronous Data:- this is when something is going on but u don't want to wait till that thing is done to continue your program, u want it to continue as the program is running
+
+// Fetch API
+
+// To get information from a Server, this is used
+// fetch("https://facebook.com/users") This mean to go to facebook.com and bring me data
+
+// the full code for fetching
+fetch("https://facebook.com/user")
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+// BreakDown
+// fetch(...) GO get Data
+// .then(response => response.json()) When it arrives, open the package
+// .then(data => console.log(data)) Now i can finally use it
+
+// async funcion getData() {
+//   await fetch("something");
+//   console.log("Done");
+// }
+
+// await means wait here until it's ready
