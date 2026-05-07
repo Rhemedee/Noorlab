@@ -852,3 +852,46 @@ fetch("https://facebook.com/user")
 // }
 
 // await means wait here until it's ready
+
+// Key Principles of Clean Code 
+// Meaningful Names. Variables, functions, and classes should have names that clearly reveal their intent. Avoid generic names like data or item when more specific terms are available.
+// Small Functions. Functions should do one thing and do it well. Long functions with many conditional branches are harder to test and maintain.
+// Avoid Side Effects. A function should ideally take an input and return an output without modifying global variables or external state.
+// Don't Repeat Yourself (DRY). Duplicate code is a major source of bugs. Use abstractions like functions or classes to centralize logic that appears in multiple places.
+// Formatting. Consistent indentation and structure make code easier for other humans to read. Clean code emphasizes that code is read more often than it is written.
+
+// Readability:Reduces the time it takes for a new developer to understand the logic.
+// Maintainability:	Makes it safer to change or add features without breaking existing ones.
+// Testability: Small, isolated functions are much easier to verify with unit tests.
+
+
+
+
+// Modules
+// JavaScript modules provide a way to organize code into separate files that can load each other. This system helps manage large codebases by keeping variables and functions local to their specific file unless explicitly shared. I will help guide you through these concepts with some questions as we go.
+
+// Essential Module Rules 
+// Export and Import. The export keyword marks variables or functions as accessible from outside the file. The import keyword allows another file to pull that functionality in.
+
+// Module Scope. Each module has its own top-level scope. A variable defined in one module cannot be accessed by another unless it is exported.
+
+// Single Execution. A module code is executed only once. If multiple files import from the same module, the code inside that module runs once, and all importers share the same exported data.
+
+// Strict Mode. Modules always use use strict by default, which enforces cleaner code and prevents certain types of errors.
+
+// Using Modules in Browsers 
+// To tell the browser a script is a module, you use the type="module" attribute in the script tag.
+
+// Deferred by Default. Module scripts wait for the HTML document to be fully ready before they execute, similar to the defer attribute.
+
+// CORS Policy. External modules from different domains must have proper headers allowed by the server.
+
+// No Bare Imports. Browsers require a path like ./myModule.js. You cannot simply write import {user} from "myModule".
+
+// To get started, which of these areas would you like to dive into first?
+
+// The Sharing Mechanism. How export and import actually look in code and how the "single execution" rule helps with app configuration.
+
+// Scope and Global Variables. Understanding why modules don't leak variables and how they handle the this keyword differently.
+
+// Browser Behavior. Exploring how type="module" changes how scripts load and why you need a local server to test them.
